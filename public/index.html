@@ -1,0 +1,190 @@
+<!DOCTYPE html>
+<html lang="">
+
+<head>
+  <meta charset="utf-8">
+  <meta http-equiv="X-UA-Compatible" content="IE=edge">
+  <meta name="viewport" content="width=device-width,initial-scale=1.0">
+  <link rel="icon" href="<%= BASE_URL %>favicon.ico">
+  <title>
+    <%= htmlWebpackPlugin.options.title %>
+  </title>
+</head>
+<style>
+  @import url("https://fonts.googleapis.com/css2?family=El+Messiri:wght@400;500;600;700&display=swap");
+  @import url("https://fonts.googleapis.com/css2?family=Poppins:wght@100;200;300;400;500;600;700;800;900&display=swap");
+  @import url("https://fonts.googleapis.com/css2?family=Lato:wght@100;300;400;700;900&display=swap");
+  @import url('https://fonts.googleapis.com/css2?family=Josefin+Sans:wght@300;400;500;600;700&display=swap');
+  * {
+    padding: 0;
+    margin: 0;
+    user-select: none;
+    box-sizing: border-box;
+    outline: none;
+    -webkit-tap-highlight-color: transparent;
+  }
+
+  :root {
+    --green: rgb(0, 255, 0);
+    --blue: #287bff;
+    --blueactive: rgb(32 98 204);
+    --red: #DC2626;
+    --black1: rgb(15 15 15);
+    --black2: rgb(25 25 25);
+    --black3: rgb(30 30 30);
+    --blackactive: rgb(40 40 40);
+  }
+
+  .text-green {
+    color: lime;
+  }
+  .text-red {
+    color: red;
+  }
+
+  #app {
+    height: 100%
+  }
+
+  html,body {
+    height: 100%;
+    width: 100%;
+  }
+
+  .custom-scroll::-webkit-scrollbar {
+    width: 8px;
+  }
+  .watch-tabs::-webkit-scrollbar,
+  .custom-scroll::-webkit-scrollbar {
+    height: 8px;
+    position: relative;
+  }
+
+  .custom-scroll::-webkit-scrollbar-thumb {
+    background: rgb(255 255 255/0.3);
+    border-radius: 40px;
+  }
+
+  .custom-scroll::-webkit-scrollbar-thumb:hover {
+    background: rgb(255 255 255/0.7);
+  }
+
+  .blur-effect-down::after,
+  .blur-effect-up::before {
+    content: "";
+    display: block;
+    height: 20px;
+    width: 100%;
+    bottom: 0;
+    position: sticky;
+    left: 0;
+    z-index: 1;
+    background: linear-gradient(to bottom, transparent, rgb(25 25 25) 80%);
+  }
+
+  .blur-effect-up::before {
+    background: linear-gradient(to bottom, rgb(25 25 25/ 80%), transparent);
+    bottom: unset;
+    top: 0;
+  }
+
+  input[type=number]::-webkit-inner-spin-button,
+  input[type=number]::-webkit-outer-spin-button {
+    -webkit-appearance: none;
+    -moz-appearance: none;
+    appearance: none;
+    margin: 0;
+  }
+
+ select{
+    appearance: none;
+   -moz-appearance: none;
+   -webkit-appearance: none;
+   width: 100%;
+   text-align: center;
+} 
+
+select option{
+  font-size: 18px;
+}
+   
+/* For IE <= 11 */
+select::-ms-expand {
+   display: none;
+}
+
+.select-icon {
+  position: absolute;
+  top: 5px;
+  left: calc(50% - 60px);
+  width: 15px;
+  height: 15px;
+}
+.select-icon svg {
+  transition: fill 0.3s ease;
+  fill: rgb(250 250 250/0.5);
+}
+
+select option{
+  border: 1px solid red;
+  padding: 10px;
+}
+
+  .notification {
+    max-height: calc(100vh - 16px);
+    overflow: hidden;
+    bottom: 10px !important;
+  }
+
+  .notification .vn-fade-move {
+    transition: all 0.1s !important;
+  }
+
+  .vue-notification-wrapper {
+    backdrop-filter: blur(8px);
+    margin: 7px !important;
+    cursor: pointer;
+
+  }
+
+  .vue-notification {
+
+    font-size: 16px !important;
+    border: 1px solid rgb(250 250 250 / 10%) !important;
+    border-radius: 6px;
+    margin: 0 !important;
+  }
+
+  .notification .red {
+    background: linear-gradient(to right, rgb(250 0 0 / 50%), rgb(250 250 250 / 10%)) !important;
+  }
+
+  .notification .yellow {
+    background: linear-gradient(to right, rgb(245 158 11/50%), rgb(250 250 250 / 10%)) !important;
+  }
+
+  .notification .blue {
+    background: linear-gradient(to right, rgb(29 78 216/50%), rgb(250 250 250 / 10%)) !important;
+  }
+
+  .notification .green {
+    background: linear-gradient(to right, rgb(5 150 105/50%), rgb(250 250 250 / 10%)) !important;
+  }
+
+  /* ------------- CUSTOM CLASSES ----------  */
+
+  .click-active:active{
+    transform: scale(0.9);
+  }
+</style>
+
+<body>
+  <noscript>
+    <strong>We're sorry but <%= htmlWebpackPlugin.options.title %> doesn't work properly without JavaScript enabled.
+        Please enable it to continue.</strong>
+  </noscript>
+  <div id="app"></div>
+  <!-- built files will be auto injected -->
+</body>
+
+</html>
